@@ -11,3 +11,15 @@ int linearSearch1(int* Array, int array_size, int x) {
     // If the value is not found in the array, return -1.
     return -1;
 }
+
+int linearSearch2(int* Array, int array_size, int x) {
+    // Counter to keep track of the number of iterations.
+    int steps = 0;
+    for (int i = 0; i < array_size; i++) {
+        steps++;
+        if (Array[i] == x)
+            return i;
+    }
+    // If the value is not found, return the total number of iterations.
+    return steps++;
+}
