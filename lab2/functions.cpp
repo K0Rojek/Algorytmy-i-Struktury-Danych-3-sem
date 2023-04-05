@@ -38,3 +38,20 @@ int binarySearch1(int* Array, int array_size, int x) {
     }
     return -1;
 }
+
+int binarySearch2(int* Array, int array_size, int x) {
+    int steps = 0; // Initialize a counter for the number of steps taken
+    int left = 0; // Index of the leftmost element of the search range.
+    int right = array_size - 1; // Index of the rightmost element of the search range.
+    while (left <= right) {
+        steps++;
+        int mid = (left + right) / 2;
+        if (Array[mid] == x)
+            return mid;
+        else if (Array[mid] > x)
+            right = mid - 1;
+        else
+            left = mid + 1;
+    }
+    return steps++; // If the target value is not found, return the number of steps taken
+}
