@@ -23,3 +23,18 @@ int linearSearch2(int* Array, int array_size, int x) {
     // If the value is not found, return the total number of iterations.
     return steps++;
 }
+
+int binarySearch1(int* Array, int array_size, int x) {
+    int left = 0; // Index of the leftmost element of the search range.
+    int right = array_size - 1; // Index of the rightmost element of the search range.
+    while (left <= right) {
+        int mid = (left + right) / 2;
+        if (Array[mid] == x)
+            return mid;
+        else if (Array[mid] > x)
+            right = mid - 1;
+        else
+            left = mid + 1;
+    }
+    return -1;
+}
