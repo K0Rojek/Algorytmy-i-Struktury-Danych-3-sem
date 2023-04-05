@@ -3,6 +3,18 @@
 #include <time.h>
 #include <algorithm>
 
+
+void initArray(int* Array, int array_size) {
+    srand(time(NULL));
+    for (int i = 0; i < array_size; i++)
+        Array[i] = rand() % array_size;
+}
+
+void sortArray(int* Array, int array_size) {
+    std::sort(Array, Array + array_size);
+}
+
+
 int linearSearch1(int* Array, int array_size, int x) {
     // If the current element matches the value being searched for, return its index.
     for (int i = 0; i < array_size; i++)
