@@ -7,7 +7,7 @@
 void initArray(int* Array, int array_size) {
     srand(time(NULL));
     for (int i = 0; i < array_size; i++)
-        Array[i] = rand() % array_size;
+        Array[i] = rand() % array_size; // Generate a random integer between 0 and array_size-1 and store it in Array[i]
 }
 
 void sortArray(int* Array, int array_size) {
