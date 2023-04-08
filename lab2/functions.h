@@ -1,6 +1,21 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
+
+/**
+ * This function initializes an integer array with random values.
+ * @param Array: A pointer to the first element of the integer array to search.
+ * @param array_size: The number of elements in the array.
+ */
+void initArray(int* Array, int array_size)
+
+/**
+ * This function sorts an integer array in ascending order.
+ * @param Array: A pointer to the first element of the integer array to search.
+ * @param array_size: The number of elements in the array.
+ */
+void sortArray(int* Array, int array_size)
+
 /**
  * This function performs linear search on an integer array to find the first occurrence of a given value.
  * @param Array: A pointer to the first element of the integer array to search.
